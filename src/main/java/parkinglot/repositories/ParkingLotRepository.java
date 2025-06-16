@@ -26,7 +26,7 @@ public class ParkingLotRepository {
         if(parkingLot.getId() == 0) {
             parkingLotId = parkingLotId + 1;
             parkingLot.setId(parkingLotId);
-            parkingLotMap.put(parkingLotId, parkingLot);
+            parkingLotMap.put(parkingLotId, parkingLot); //(or) parkingLotMap.put(parkingLotId + 1, parkingLot); (or) parkingLotMap.put(++parkingLotId, parkingLot);
             return parkingLot;
         }
         parkingLotMap.put(parkingLot.getId(), parkingLot);
